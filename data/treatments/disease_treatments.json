@@ -1,0 +1,122 @@
+[
+  {
+    "disease": "Early Blight",
+    "crop": "Tomato",
+    "class_label": "Tomato___Early_blight",
+    "symptoms": "Dark brown to black concentric rings (target-like spots) on lower/older leaves first. Yellowing around spots. Leaves dry up and fall. Can affect stems and fruit.",
+    "chemical_treatment": "Apply Mancozeb 75% WP (2-2.5g/L) every 7-10 days as preventive. For active infection: Azoxystrobin (1ml/L) or Chlorothalonil (2g/L). Alternate chemicals to prevent resistance.",
+    "organic_treatment": "Neem oil (5ml/L) every 10 days. Trichoderma viride bio-fungicide (5g/L). Copper-based sprays. Mulching to prevent soil splash.",
+    "prevention": "Use certified disease-free seeds. 3-year crop rotation. Remove infected debris. Proper plant spacing (60cm). Avoid overhead irrigation. Use drip irrigation.",
+    "severity": "Moderate to High. Can cause 50-80% yield loss if untreated."
+  },
+  {
+    "disease": "Late Blight",
+    "crop": "Tomato",
+    "class_label": "Tomato___Late_blight",
+    "symptoms": "Water-soaked, dark green to brown spots on leaves, starting from tips and edges. White fuzzy mold on underside (in humid conditions). Rapid wilting and plant death. Brown firm rot on fruit.",
+    "chemical_treatment": "Metalaxyl + Mancozeb (Ridomil Gold MZ, 2g/L). Cymoxanil + Mancozeb. Copper oxychloride (3g/L). Start spraying before symptoms in humid weather.",
+    "organic_treatment": "Bordeaux mixture (1%). Copper-based organic fungicides. Remove infected plants immediately. Do not compost infected material.",
+    "prevention": "Plant resistant varieties. Avoid overhead watering. Use drip irrigation. Good air circulation. Remove volunteer plants. Apply preventive sprays during humid/rainy periods.",
+    "severity": "Very High. Can destroy entire crop in 7-10 days during favorable conditions."
+  },
+  {
+    "disease": "Bacterial Spot",
+    "crop": "Tomato",
+    "class_label": "Tomato___Bacterial_spot",
+    "symptoms": "Small, dark, water-soaked spots on leaves, stems, and fruit. Spots may have yellow halo. Severe defoliation. Raised scab-like spots on fruit.",
+    "chemical_treatment": "Copper hydroxide (2g/L) + Streptocycline (0.5g/L). Kasugamycin. Apply at first sign of disease. Repeat every 7 days.",
+    "organic_treatment": "Copper-based sprays. Remove and destroy infected plants. Avoid working in wet fields.",
+    "prevention": "Use disease-free seeds (hot water treated). Avoid overhead irrigation. Proper spacing. Crop rotation (2-3 years). Clean tools between plants.",
+    "severity": "Moderate. Can cause 10-50% yield loss."
+  },
+  {
+    "disease": "Leaf Mold",
+    "crop": "Tomato",
+    "class_label": "Tomato___Leaf_Mold",
+    "symptoms": "Yellow spots on upper leaf surface. Olive-green to gray fuzzy mold on underside. Leaves curl and dry. Common in greenhouses with high humidity.",
+    "chemical_treatment": "Chlorothalonil (2g/L). Mancozeb (2.5g/L). Copper oxychloride. Improve ventilation in greenhouse.",
+    "organic_treatment": "Improve air circulation. Reduce humidity. Neem oil (5ml/L). Remove lower leaves for airflow.",
+    "prevention": "Maintain humidity below 85%. Proper ventilation. Wide spacing. Use resistant varieties. Drip irrigation only.",
+    "severity": "Moderate. Reduces photosynthesis and yield."
+  },
+  {
+    "disease": "Septoria Leaf Spot",
+    "crop": "Tomato",
+    "class_label": "Tomato___Septoria_leaf_spot",
+    "symptoms": "Numerous small, circular spots (1-3mm) with dark borders and gray/tan centers. Tiny black dots (pycnidia) visible in centers. Starts on lower leaves.",
+    "chemical_treatment": "Chlorothalonil (2g/L). Mancozeb (2.5g/L). Copper-based fungicides. Start when first spots appear.",
+    "organic_treatment": "Copper sprays. Remove infected lower leaves. Mulch around plants. Neem oil.",
+    "prevention": "Crop rotation. Remove plant debris. Mulching. Avoid overhead watering. Use resistant varieties.",
+    "severity": "Moderate. Defoliation reduces fruit size and quality."
+  },
+  {
+    "disease": "Apple Scab",
+    "crop": "Apple",
+    "class_label": "Apple___Apple_scab",
+    "symptoms": "Olive-brown velvety spots on leaves and fruit. Distorted fruit shape. Premature leaf drop. Cracked and corky spots on fruit.",
+    "chemical_treatment": "Mancozeb (2.5g/L) as preventive from green tip stage. Myclobutanil (0.5ml/L) as curative. Captan (2g/L). Apply before rain events.",
+    "organic_treatment": "Sulfur-lime spray. Neem oil. Remove fallen leaves (primary inoculum source).",
+    "prevention": "Plant resistant varieties (Gala, Fuji). Remove fallen leaves in autumn. Prune for air circulation. Apply dormant sprays.",
+    "severity": "High for susceptible varieties. Causes unmarketable fruit."
+  },
+  {
+    "disease": "Black Rot",
+    "crop": "Apple",
+    "class_label": "Apple___Black_rot",
+    "symptoms": "Reddish-brown expanding leaf lesions. 'Frog-eye' leaf spots. Fruit rot with concentric rings. Mummified fruit remaining on tree. Cankers on branches.",
+    "chemical_treatment": "Captan (2g/L). Thiophanate-methyl. Mancozeb. Apply from pink bud through cover sprays.",
+    "organic_treatment": "Copper sprays (dormant season). Remove mummified fruit. Prune cankers 15cm below visible edge.",
+    "prevention": "Remove mummified fruit and cankered branches. Practice good orchard sanitation. Prune for airflow.",
+    "severity": "Moderate to High. Fruit rot can cause major losses."
+  },
+  {
+    "disease": "Powdery Mildew",
+    "crop": "Various (Cherry, Squash, Grape)",
+    "class_label": "multiple",
+    "symptoms": "White powdery coating on leaf surfaces. Stunted growth. Leaf curling and distortion. Premature leaf drop. Affects young tissues most.",
+    "chemical_treatment": "Sulfur WP (3g/L). Carbendazim (1g/L). Hexaconazole (1ml/L). Triadimefon. Alternate modes of action.",
+    "organic_treatment": "Milk spray (40% milk + 60% water). Baking soda (1 tsp/L). Neem oil (5ml/L). Potassium bicarbonate.",
+    "prevention": "Proper air circulation and spacing. Avoid overcrowding. Full sun exposure. Resistant varieties. Avoid overhead irrigation.",
+    "severity": "Moderate. Reduces photosynthesis, yield, and fruit quality."
+  },
+  {
+    "disease": "Common Rust",
+    "crop": "Corn (Maize)",
+    "class_label": "Corn_(maize)___Common_rust_",
+    "symptoms": "Small, circular to elongated, reddish-brown pustules (raised bumps) on both leaf surfaces. Pustules release powdery, rust-colored spores when rubbed.",
+    "chemical_treatment": "Propiconazole (1ml/L). Mancozeb (2.5g/L). Azoxystrobin. Apply at first sign of pustules.",
+    "organic_treatment": "Remove heavily infected leaves. Use resistant hybrids. Crop rotation.",
+    "prevention": "Plant resistant hybrids. Early planting. Balanced nutrition. Remove crop residue.",
+    "severity": "Low to Moderate in resistant varieties. High in susceptible sweet corn."
+  },
+  {
+    "disease": "Early Blight",
+    "crop": "Potato",
+    "class_label": "Potato___Early_blight",
+    "symptoms": "Dark, concentric ring spots (target spots) on older/lower leaves. Yellowing and premature death of leaves from bottom up. Can affect tubers (dark, sunken lesions).",
+    "chemical_treatment": "Mancozeb (2.5g/L). Chlorothalonil (2g/L). Azoxystrobin for severe cases. Apply 7-day intervals during vine growth.",
+    "organic_treatment": "Neem oil. Trichoderma viride. Copper-based sprays. Mulching.",
+    "prevention": "Plant certified disease-free seed. 2-3 year rotation. Adequate fertilization (K, N). Destroy volunteer plants. Irrigate early in day.",
+    "severity": "Moderate. Can cause 20-40% yield loss."
+  },
+  {
+    "disease": "Late Blight",
+    "crop": "Potato",
+    "class_label": "Potato___Late_blight",
+    "symptoms": "Water-soaked, pale green to dark brown spots on leaf tips/edges. White mold on underside in humid conditions. Rapid death of vines. Tuber rot (reddish-brown granular decay).",
+    "chemical_treatment": "Metalaxyl + Mancozeb (Ridomil Gold, 2g/L). Cymoxanil. Dimethomorph. Apply preventively during cool, wet weather.",
+    "organic_treatment": "Bordeaux mixture (1%). Copper hydroxide. Destroy infected plants immediately. Do not compost.",
+    "prevention": "Plant resistant varieties. Certified disease-free seed. Avoid overhead irrigation. Hills high for tuber protection. Monitor weather forecasts.",
+    "severity": "Very High. Can destroy entire field in 1-2 weeks. Irish Potato Famine was caused by this disease."
+  },
+  {
+    "disease": "Citrus Greening (Huanglongbing)",
+    "crop": "Orange/Citrus",
+    "class_label": "Orange___Haunglongbing_(Citrus_greening)",
+    "symptoms": "Asymmetric yellowing (blotchy mottle) of leaves. Small, lopsided, bitter fruit. Green color retention on fruit. Stunted growth. Eventually kills the tree.",
+    "chemical_treatment": "No cure exists. Control psyllid vector with Imidacloprid (0.5ml/L), Dimethoate. Antibiotic trunk injections (experimental). Nutritional sprays to prolong tree life.",
+    "organic_treatment": "Release parasitoid wasps (Tamarixia radiata) for psyllid control. Neem oil. Remove infected trees to prevent spread.",
+    "prevention": "Plant certified disease-free nursery stock. Scout and control Asian citrus psyllid. Remove infected trees. Use windbreaks.",
+    "severity": "Very High. No cure. Tree dies within 3-5 years. Most destructive citrus disease worldwide."
+  }
+]

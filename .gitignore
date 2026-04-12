@@ -1,0 +1,101 @@
+# ═══════════════════════════════════════════════════════════════
+# KrishiMitra — Production .gitignore
+# ═══════════════════════════════════════════════════════════════
+
+# ── Secrets & Environment ────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.crt
+*.p12
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Virtual Environments ────────────────────────────────────
+venv/
+.venv/
+env/
+ENV/
+
+# ── ML Models (large binary files) ──────────────────────────
+models/*.h5
+models/*.keras
+models/*.tflite
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.pkl
+models/*.joblib
+
+# ── Data ────────────────────────────────────────────────────
+data/raw/
+*.zip
+
+# ── Logs ────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── IDE & Editors ───────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# ── OS Generated ────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ── ChromaDB / Vector Stores ────────────────────────────────
+knowledge_base/chroma/
+
+# ── Temp & Cache ────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+coverage.xml
+
+# ── Docker ──────────────────────────────────────────────────
+*.tar
+docker-compose.override.yml
+
+# ── Sensitive / Non-Code Files (project-specific) ───────────
+port.txt
+tun.json
+*.pdf
+*.docx
+Team_Modules_Zips/
+
+# ── Ngrok / Tunnel configs ──────────────────────────────────
+ngrok.yml
+*.ngrok*
+
+# ── Jupyter Notebooks Checkpoints ───────────────────────────
+.ipynb_checkpoints/

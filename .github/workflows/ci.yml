@@ -1,0 +1,144 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  # ── Lint & Type Check ───────────────────────────────────────
+  lint:
+    name: Lint & Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff mypy
+
+      - name: Run Ruff linter
+        run: ruff check . --output-format=github
+
+      - name: Run Ruff formatter check
+        run: ruff format --check .
+
+  # ── Security Scan ───────────────────────────────────────────
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install safety bandit
+
+      - name: Run Bandit security linter
+        run: bandit -r app/ -f json -o bandit-report.json || true
+
+      - name: Upload Bandit report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bandit-security-report
+          path: bandit-report.json
+
+      - name: Check for hardcoded secrets
+        run: |
+          pip install detect-secrets
+          detect-secrets scan --all-files --exclude-files '\.env\.example$' > .secrets-baseline.json
+          python -c "
+          import json
+          with open('.secrets-baseline.json') as f:
+              data = json.load(f)
+          results = data.get('results', {})
+          if results:
+              print('⚠️  Potential secrets detected:')
+              for file, findings in results.items():
+                  for f_item in findings:
+                      print(f'  {file}:{f_item[\"line_number\"]} - {f_item[\"type\"]}')
+              exit(1)
+          else:
+              print('✅ No secrets detected')
+          "
+
+  # ── Tests ───────────────────────────────────────────────────
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    needs: [lint]
+    services:
+      mongodb:
+        image: mongo:7.0
+        ports:
+          - 27017:27017
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio httpx
+
+      - name: Run tests
+        env:
+          APP_ENV: testing
+          MONGODB_URL: mongodb://localhost:27017
+          MONGODB_DB_NAME: krishimitra_test
+          TWILIO_ACCOUNT_SID: test_sid
+          TWILIO_AUTH_TOKEN: test_token
+          GEMINI_API_KEY: test_key
+          OPENWEATHER_API_KEY: test_key
+        run: pytest tests/ -v --tb=short
+
+  # ── Docker Build ────────────────────────────────────────────
+  docker:
+    name: Docker Build
+    runs-on: ubuntu-latest
+    needs: [test, security]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t krishimitra:${{ github.sha }} .
+
+      - name: Test Docker image
+        run: |
+          docker run -d --name test-krishimitra \
+            -e MONGODB_URL=mongodb://localhost:27017 \
+            -e TWILIO_ACCOUNT_SID=test \
+            -e TWILIO_AUTH_TOKEN=test \
+            -e GEMINI_API_KEY=test \
+            -e OPENWEATHER_API_KEY=test \
+            krishimitra:${{ github.sha }}
+          sleep 5
+          docker logs test-krishimitra
+          docker stop test-krishimitra

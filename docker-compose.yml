@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # ── FastAPI Application ──────────────────────────────
+  app:
+    build: .
+    container_name: krishimitra-app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - MONGODB_URL=mongodb://mongo:27017
+      - MONGODB_DB_NAME=krishimitra
+    env_file:
+      - .env
+    depends_on:
+      - mongo
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+      - ./logs:/app/logs
+    networks:
+      - krishimitra-network
+
+  # ── MongoDB Database ─────────────────────────────────
+  mongo:
+    image: mongo:7.0
+    container_name: krishimitra-mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - krishimitra-network
+
+  # ── MongoDB Express (Admin UI) ───────────────────────
+  mongo-express:
+    image: mongo-express:latest
+    container_name: krishimitra-mongo-express
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017
+      ME_CONFIG_BASICAUTH: "false"
+    depends_on:
+      - mongo
+    networks:
+      - krishimitra-network
+
+volumes:
+  mongo-data:
+
+networks:
+  krishimitra-network:
+    driver: bridge

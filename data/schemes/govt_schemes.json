@@ -1,0 +1,90 @@
+[
+  {
+    "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+    "name_hi": "प्रधानमंत्री किसान सम्मान निधि",
+    "description": "Direct income support of ₹6,000 per year to small and marginal farmer families, paid in three installments of ₹2,000 each.",
+    "eligibility": "All farmer families with cultivable land holdings. Excluded: Institutional land holders, former/present ministers, income tax payers, professionals (doctors, engineers, lawyers, CAs).",
+    "benefits": "₹6,000/year directly credited to bank account in 3 installments of ₹2,000 each (April-July, August-November, December-March).",
+    "how_to_apply": "Visit pmkisan.gov.in → New Registration → Enter Aadhaar, bank details, land records. OR visit local CSC (Common Service Centre).",
+    "helpline": "155261, 011-24300606",
+    "website": "https://pmkisan.gov.in",
+    "category": "income_support"
+  },
+  {
+    "name": "PMFBY (Pradhan Mantri Fasal Bima Yojana)",
+    "name_hi": "प्रधानमंत्री फसल बीमा योजना",
+    "description": "Comprehensive crop insurance scheme providing financial support to farmers suffering crop loss/damage due to natural calamities, pests, and diseases.",
+    "eligibility": "All farmers growing notified crops. Mandatory for loanee farmers, optional for non-loanee farmers.",
+    "benefits": "Insurance coverage at very low premium: 2% for Kharif crops, 1.5% for Rabi crops, 5% for commercial/horticultural crops. Government pays remaining premium.",
+    "how_to_apply": "Apply through any bank branch, CSC center, or online at pmfby.gov.in within the notification period. Requires land ownership proof, Aadhaar, bank details.",
+    "helpline": "1800-180-1551",
+    "website": "https://pmfby.gov.in",
+    "category": "insurance"
+  },
+  {
+    "name": "Kisan Credit Card (KCC)",
+    "name_hi": "किसान क्रेडिट कार्ड",
+    "description": "Provides adequate and timely credit support to farmers for their agricultural needs including crop production, post-harvest expenses, farm maintenance, and allied activities.",
+    "eligibility": "All farmers, sharecroppers, tenant farmers, self-help groups, joint liability groups.",
+    "benefits": "Credit limit based on land holding and crop pattern. Interest rate: 7% (with 3% subvention = effective 4% for timely repayment). Animal husbandry and fisheries now included.",
+    "how_to_apply": "Apply at any commercial bank, cooperative bank, or regional rural bank. Take: Land documents, Aadhaar, photo, bank passbook.",
+    "helpline": "Contact nearest bank branch",
+    "website": "https://www.nabard.org",
+    "category": "credit"
+  },
+  {
+    "name": "Soil Health Card Scheme",
+    "name_hi": "मृदा स्वास्थ्य कार्ड योजना",
+    "description": "Provides soil health cards to farmers with information on nutrient status of their soil along with recommendations on appropriate dosage of nutrients for improving soil health and fertility.",
+    "eligibility": "All farmers across India.",
+    "benefits": "Free soil testing every 2 years. Crop-wise nutrient recommendations. Helps optimize fertilizer use and reduce costs.",
+    "how_to_apply": "Contact local agriculture department or Krishi Vigyan Kendra (KVK). Soil samples are collected and tested at government labs.",
+    "helpline": "Contact local KVK",
+    "website": "https://soilhealth.dac.gov.in",
+    "category": "advisory"
+  },
+  {
+    "name": "PM Krishi Sinchai Yojana (PMKSY)",
+    "name_hi": "प्रधानमंत्री कृषि सिंचाई योजना",
+    "description": "Aims to ensure access to some means of protective irrigation to all agricultural farms (Har Khet Ko Paani) and improve water use efficiency (More Crop Per Drop) through micro-irrigation.",
+    "eligibility": "All farmers, with priority to small and marginal farmers. Land ownership documents required.",
+    "benefits": "55% subsidy for small/marginal farmers, 45% for others on micro-irrigation (drip and sprinkler) equipment.",
+    "how_to_apply": "Apply through district agriculture office or state agriculture portal. Submit: Land documents, Aadhaar, water source proof.",
+    "helpline": "Contact district agriculture officer",
+    "website": "https://pmksy.gov.in",
+    "category": "irrigation"
+  },
+  {
+    "name": "e-NAM (National Agriculture Market)",
+    "name_hi": "राष्ट्रीय कृषि बाजार (ई-नाम)",
+    "description": "Pan-India electronic trading portal linking existing APMC mandis to create a unified national market for agricultural commodities.",
+    "eligibility": "All farmers, traders, commission agents, and processors.",
+    "benefits": "Better price discovery through transparent auction. Direct sale to buyers across India. Reduced intermediaries. Online payment and quality assaying.",
+    "how_to_apply": "Register at enam.gov.in with Aadhaar and bank details. Can also register at nearest e-NAM enabled mandi.",
+    "helpline": "1800-270-0224",
+    "website": "https://enam.gov.in",
+    "category": "market"
+  },
+  {
+    "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+    "name_hi": "परम्परागत कृषि विकास योजना",
+    "description": "Promotes organic farming through adoption of organic village clusters. Farmers are provided financial assistance for organic inputs, certification, and marketing.",
+    "eligibility": "Groups of 50+ farmers forming a cluster of 50 acres. Priority to women farmers and SC/ST farmers.",
+    "benefits": "₹50,000/hectare over 3 years for organic inputs, seeds, and marketing. PGS (Participatory Guarantee System) certification.",
+    "how_to_apply": "Form a cluster of 50 farmers with 50 acres. Apply through state agriculture department or visit pgsindia-ncof.gov.in.",
+    "helpline": "Contact state agriculture department",
+    "website": "https://pgsindia-ncof.gov.in",
+    "category": "organic_farming"
+  },
+  {
+    "name": "National Mission on Sustainable Agriculture (NMSA)",
+    "name_hi": "राष्ट्रीय सतत कृषि मिशन",
+    "description": "Aims to make agriculture more productive, sustainable, and climate resilient through improved production practices, soil health management, and water use efficiency.",
+    "eligibility": "All farmers, particularly those in rainfed areas.",
+    "benefits": "Subsidies on: Micro-irrigation, soil testing, organic manure production, climate resilient crop varieties.",
+    "how_to_apply": "Contact district agriculture office. Projects are implemented through state agriculture departments.",
+    "helpline": "Contact local agriculture extension officer",
+    "website": "https://nmsa.dac.gov.in",
+    "category": "sustainability"
+  }
+]
