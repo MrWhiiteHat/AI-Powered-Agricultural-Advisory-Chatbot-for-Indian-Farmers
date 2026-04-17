@@ -34,31 +34,30 @@ graph TD
     classDef microservice fill:#f4e8f8,stroke:#8e24aa,stroke-width:2px,color:#333
 
     Farmer["Farmer (Twilio WhatsApp)"]:::external
+    WebUI["Farmer (Web UI)"]:::external
     Ngrok["ngrok (Secure Tunnel)"]:::external
     ApiGateway["API Gateway (FastAPI)"]:::backend
     MongoDb[("Database (MongoDB)")]:::database
-    
-    subgraph AI_Microservices_Domain ["AI Microservices Domain"]
+
+    subgraph AI_Microservices_Domain["AI Microservices Domain"]
         Gemini["Gemini Engine (Google GenAI)"]:::microservice
         Vision["Vision Model (TensorFlow CNN)"]:::microservice
         Speech["Speech Module (OpenAI Whisper)"]:::microservice
     end
 
     Farmer -- "Payload" --> Ngrok
+    WebUI -- "HTTP Request" --> ApiGateway
     Ngrok -- "Webhook" --> ApiGateway
-    
     ApiGateway -- "Log Request" --> MongoDb
-    
     ApiGateway -- "Text" --> Gemini
     ApiGateway -- "Image" --> Vision
     ApiGateway -- "Audio" --> Speech
-    
     Gemini -. "Async Response" .-> ApiGateway
     Vision -. "Async Response" .-> ApiGateway
     Speech -. "Async Response" .-> ApiGateway
-
     ApiGateway -- "Response" --> Ngrok
     Ngrok -- "WhatsApp Message" --> Farmer
+    ApiGateway -- "Web Response" --> WebUI
 ```
 
 | Component | Technology | Purpose |
