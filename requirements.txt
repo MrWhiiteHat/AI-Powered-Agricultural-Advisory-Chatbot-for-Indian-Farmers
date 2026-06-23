@@ -18,7 +18,7 @@ google-generativeai==0.4.0
 
 # ===== RAG =====
 chromadb==0.4.22
-sentence-transformers==2.3.1
+sentence-transformers==5.4.0
 
 # ===== WhatsApp/Twilio =====
 twilio==9.0.0
